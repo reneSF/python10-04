@@ -1,5 +1,5 @@
-import firebase_admin
-from firebase_admin import credentials, firestore
+import firebase_config
+from firebase_config import credentials, firestore
 import os
 from dotenv import load_dotenv
 
@@ -13,5 +13,5 @@ cred = credentials.certificate({
     "private_key": os.getenv("FIREBASE_PRIVATE_KEY").replace("\\n", "\n")
 })
 
-firebase_admin.initialize_app(cred)
+firebase_config.initialize_app(cred)
 db = firestore.client()
