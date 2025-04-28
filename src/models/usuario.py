@@ -1,4 +1,4 @@
-from interfaces.usuario_interface import UsuarioInterface
+from interface.usuario_interface import UsuarioInterface
 
 class Usuario:
     def __init__(self, **kwargs):
